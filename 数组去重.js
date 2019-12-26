@@ -13,3 +13,10 @@ function unique(array){
 //再简化
 let unique = (arr) => [...new Set(arr)]
 
+//Object 键值对
+function distinct(array) {
+    var obj = {};
+    return array.filter(function(item, index, array){
+        return obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] = true)
+    })
+}
